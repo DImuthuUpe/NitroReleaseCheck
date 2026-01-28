@@ -12,9 +12,11 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
+import { HybridCrossPlatformMath } from 'react-native-math';
+
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
-
+  console.log('2 + 3 = ', HybridCrossPlatformMath.add(2, 3));
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
