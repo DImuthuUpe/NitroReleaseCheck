@@ -25,6 +25,11 @@ apply from: "./fix-prefab.gradle"
 
 if (isNewArchitectureEnabled()) {
   apply plugin: "com.facebook.react"
+  react {
+    libraryName = "NitroMath"
+    codegenJavaPackageName = "com.margelo.nitro.math"
+    jsRootDir = file("../src")
+  }
 }
 
 def getExtOrDefault(name) {
